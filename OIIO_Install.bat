@@ -17,7 +17,7 @@ if /I "%1"=="-y" set SILENT_INSTALL=1
 REM ---------------------------
 REM Check if oiiotool.exe already exists
 REM ---------------------------
-if exist "%INSTALL_DIR%\bin\oiiotool.exe" (
+if exist "%INSTALL_DIR%\oiiotool.exe" (
     echo oiiotool.exe already installed in %INSTALL_DIR%
     goto :EOF
 )
@@ -55,5 +55,5 @@ REM Cleanup
 REM ---------------------------
 del "%TEMP_ZIP%"
 
-echo Installation complete. oiiotool.exe should now be in %INSTALL_DIR%\bin
+echo Installation complete. oiiotool.exe should now be in %INSTALL_DIR%
 pause
